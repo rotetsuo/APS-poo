@@ -44,6 +44,10 @@ class Main {
           break;
         case 2:
           // code block
+          int codigoRemover;
+          System.out.println("Digite o código do produto que deseja remover:");
+          codigoRemover = entrada.nextInt();
+          System.out.print(gerenciador.remover(codigoRemover));
           break;
         case 3:
           int codigoProduto;
