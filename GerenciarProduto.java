@@ -97,5 +97,33 @@ public class GerenciarProduto{
     return produtosPereciveis;
   }
 
+  public double venderProduto(int codigoProduto, int quantidade){
+    for (Produto cadaProduto : produtos){
+      if (cadaProduto.getCodigo() == codigoProduto){   
+        return cadaProduto.vender(quantidade);
+      }
+    }
+    return -1;
+  }
+
+  public boolean comprarProduto(int codigoProduto, int quantidade){
+    for (Produto cadaProduto : produtos){
+      if (cadaProduto.getCodigo() == codigoProduto){   
+        cadaProduto.comprar(quantidade);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public String listarTudo(){
+    String listaProdutos = "\n Todos produtos: \n";
+    for (Produto cadaProduto : produtos){
+      listaProdutos += cadaProduto;
+    }
+    return listaProdutos;
+  }
+
+
 
 }

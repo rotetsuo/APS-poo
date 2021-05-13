@@ -12,7 +12,7 @@ class Main {
     gerenciador.adicionar(pd2);
     gerenciador.adicionar(pd3);
     gerenciador.adicionar(pd4);
-   System.out.println(gerenciador.listarPorValidade("25/04/2010"));
+   System.out.println(gerenciador.listarTudo());
 /*
   System.out.println(celular.getEstoque());
    celular.vender(10);
