@@ -14,7 +14,7 @@ public abstract class Produto{
   }
 
   public double vender(int quantidade){
-    if(this.estoque > quantidade){
+    if(this.estoque > quantidade || this.estoque == quantidade && this.estoque != 0){
       this.estoque -= quantidade;
       return this.valor * quantidade;
     }else{

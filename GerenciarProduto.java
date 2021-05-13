@@ -60,7 +60,7 @@ public class GerenciarProduto{
   public String listarEstoqueMenorQue(int quantidadeMinima){
     String estoque = "\nProdutos que possuem estoque menor que" + quantidadeMinima + ":\n";
     for (Produto cadaProduto : produtos){
-        if (cadaProduto.getEstoque() > quantidadeMinima){   
+        if (cadaProduto.getEstoque() < quantidadeMinima){   
               estoque += cadaProduto.toString();
         }
     }
